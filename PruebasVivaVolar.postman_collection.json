@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "3bf83859-3e7d-4052-8bb5-ab867e4db704",
+		"name": "PruebasVivaVolar",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44380/api/Usuarios/CrearUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idUsuario\": 0,\r\n  \"usuario\": \"nramirez\",\r\n  \"nombreUsuario\": \"Nicolas Ramirez\",\r\n  \"passUser\": \"Nico123**\",\r\n  \"email\": \"nataliahig@gmail.com\",\r\n  \"idTipoUser\": 2,\r\n  \"usuarioIdentificacion\": \"1111111111\",\r\n  \"tipoIdentificacion\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44380/api/Usuarios/CrearUsuario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"Usuarios",
+						"CrearUsuario"
+					]
+				},
+				"description": "Crear usuario"
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44380/api/Usuarios/EditarUsuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idUsuario\": 3,\r\n  \"usuario\": \"nramirez\",\r\n  \"nombreUsuario\": \"Nicolas Ramirez Higuita\",\r\n  \"passUser\": \"Nico123**\",\r\n  \"email\": \"nataliahig@gmail.com\",\r\n  \"idTipoUser\": 2,\r\n  \"usuarioIdentificacion\": \"1036666666\",\r\n  \"tipoIdentificacion\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44380/api/Usuarios/EditarUsuario",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"Usuarios",
+						"EditarUsuario"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44380/api/Usuarios/IniciarSesion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idUsuario\": 0,\r\n  \"usuario\": \"aeramirezji\",\r\n  \"nombreUsuario\": \"\",\r\n  \"passUser\": \"Nicolas1*\",\r\n  \"email\": \"\",\r\n  \"idTipoUser\": 0,\r\n  \"usuarioIdentificacion\": \"\",\r\n  \"tipoIdentificacion\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44380/api/Usuarios/IniciarSesion",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"Usuarios",
+						"IniciarSesion"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44380/api/Vuelos/CrearVuelos",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"usuario\": {\r\n    \"idUsuario\": 0,\r\n    \"usuario\": \"aeramirezji\",\r\n    \"nombreUsuario\": \"\",\r\n    \"passUser\": \"Nicolas1*\",\r\n    \"email\": \"string\",\r\n    \"idTipoUser\": 0,\r\n    \"usuarioIdentificacion\": \"\",\r\n    \"tipoIdentificacion\": 0\r\n  },\r\n  \"vuelos\": {\r\n    \"idVuelo\": 0,\r\n    \"numeroVuelo\": \"VUELO2\",\r\n    \"fechaDisponibilidad\": \"2022-04-11T10:47:52.533Z\",\r\n    \"cantidadSilla\": 50,\r\n    \"ciudadOrigen\": \"MEDELLIN\",\r\n    \"ciudadDestino\": \"BUCARAMANGA\",\r\n    \"precio\": 98000\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44380/api/Vuelos/CrearVuelos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"Vuelos",
+						"CrearVuelos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44380/api/Vuelos/EditarVuelos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFlcmFtaXJlemppIiwibmJmIjoxNjQ2ODM5OTI1LCJleHAiOjE2NDY4NDM1MjQsImlhdCI6MTY0NjgzOTkyNX0.w3zlBdCsMANF7IGFLQrlue-3I6Df_4nUCwSvR-r0slU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"usuario\": {\r\n    \"idUsuario\": 0,\r\n    \"usuario\": \"aeramirezji\",\r\n    \"nombreUsuario\": \"\",\r\n    \"passUser\": \"Nicolas1*\",\r\n    \"email\": \"string\",\r\n    \"idTipoUser\": 0,\r\n    \"usuarioIdentificacion\": \"\",\r\n    \"tipoIdentificacion\": 0\r\n  },\r\n  \"vuelos\": {\r\n    \"idVuelo\": 3,\r\n    \"numeroVuelo\": \"VUELO2\",\r\n    \"fechaDisponibilidad\": \"2022-04-11T10:47:52.533Z\",\r\n    \"cantidadSilla\": 50,\r\n    \"ciudadOrigen\": \"MEDELLIN\",\r\n    \"ciudadDestino\": \"BUCARAMANGA\",\r\n    \"precio\": 98000\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44380/api/Vuelos/EditarVuelos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"Vuelos",
+						"EditarVuelos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44380/api/Vuelos/ListarVuelos",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFlcmFtaXJlemppIiwibmJmIjoxNjQ2ODM5OTI1LCJleHAiOjE2NDY4NDM1MjQsImlhdCI6MTY0NjgzOTkyNX0.w3zlBdCsMANF7IGFLQrlue-3I6Df_4nUCwSvR-r0slU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idUsuario\": 0,\r\n  \"usuario\": \"aeramirezji\",\r\n  \"nombreUsuario\": \"string\",\r\n  \"passUser\": \"Nicolas1*\",\r\n  \"email\": \"string\",\r\n  \"idTipoUser\": 0,\r\n  \"usuarioIdentificacion\": \"string\",\r\n  \"tipoIdentificacion\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44380/api/Vuelos/ListarVuelos",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"Vuelos",
+						"ListarVuelos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44380/api/Vuelos/ListVuelosParaUsuarios",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFlcmFtaXJlemppIiwibmJmIjoxNjQ2ODM5OTI1LCJleHAiOjE2NDY4NDM1MjQsImlhdCI6MTY0NjgzOTkyNX0.w3zlBdCsMANF7IGFLQrlue-3I6Df_4nUCwSvR-r0slU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"usuario\": {\r\n    \"idUsuario\": 0,\r\n    \"usuario\": \"nramirez\",\r\n    \"nombreUsuario\": \"string\",\r\n    \"passUser\": \"Nico123**\",\r\n    \"email\": \"string\",\r\n    \"idTipoUser\": 0,\r\n    \"usuarioIdentificacion\": \"string\",\r\n    \"tipoIdentificacion\": 0\r\n  },\r\n  \"vuelos\": {\r\n    \"idVuelo\": 0,\r\n    \"numeroVuelo\": \"string\",\r\n    \"fechaDisponibilidad\": \"2022-04-09\",\r\n    \"cantidadSilla\": 0,\r\n    \"ciudadOrigen\": \"MEDELLIN\",\r\n    \"ciudadDestino\": \"BOGOTÁ\",\r\n    \"precio\": 0\r\n  }\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44380/api/Vuelos/ListVuelosParaUsuarios",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"Vuelos",
+						"ListVuelosParaUsuarios"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44380/api/Reserva/ReservarVuelo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFlcmFtaXJlemppIiwibmJmIjoxNjQ2ODM5OTI1LCJleHAiOjE2NDY4NDM1MjQsImlhdCI6MTY0NjgzOTkyNX0.w3zlBdCsMANF7IGFLQrlue-3I6Df_4nUCwSvR-r0slU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"usuario\": {\r\n    \"idUsuario\": 0,\r\n    \"usuario\": \"aeramirezji\",\r\n    \"nombreUsuario\": \"string\",\r\n    \"passUser\": \"Nicolas1*\",\r\n    \"email\": \"string\",\r\n    \"idTipoUser\": 0,\r\n    \"usuarioIdentificacion\": \"string\",\r\n    \"tipoIdentificacion\": 0\r\n  },\r\n  \"reserva\": {\r\n    \"idReserva\": 0,\r\n    \"idUsuario\": 3,\r\n    \"idVuelo\": 1\r\n  }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44380/api/Reserva/ReservarVuelo",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"Reserva",
+						"ReservarVuelo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44380/api/Reserva/ListarReservas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImFlcmFtaXJlemppIiwibmJmIjoxNjQ2ODM5OTI1LCJleHAiOjE2NDY4NDM1MjQsImlhdCI6MTY0NjgzOTkyNX0.w3zlBdCsMANF7IGFLQrlue-3I6Df_4nUCwSvR-r0slU",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"idUsuario\": 0,\r\n  \"usuario\": \"aeramirezji\",\r\n  \"nombreUsuario\": \"string\",\r\n  \"passUser\": \"Nicolas1*\",\r\n  \"email\": \"string\",\r\n  \"idTipoUser\": 0,\r\n  \"usuarioIdentificacion\": \"string\",\r\n  \"tipoIdentificacion\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44380/api/Reserva/ListarReservas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44380",
+					"path": [
+						"api",
+						"Reserva",
+						"ListarReservas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
